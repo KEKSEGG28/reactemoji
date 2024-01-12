@@ -20,12 +20,12 @@ export const App = () => {
     <Card title={el.title} symbol={el.symbol} keywords={el.keywords} />
   ));
   useEffect(() => {
-    // fetch(
-    //   `http://api.codeoverdose.space/api/emoji?search=${searchValue}&page=${page}&limit=${selectedPage}`
-    // )
     fetch(
-      `http://localhost:7002/api/emoji?search=${searchValue}&page=${page}&limit=${selectedPage}`
+      `http://api.codeoverdose.space/api/emoji?search=${searchValue}&page=${page}&limit=${selectedPage}`
     )
+    // fetch(
+    //   `http://localhost:7002/api/emoji?search=${searchValue}&page=${page}&limit=${selectedPage}`
+    // )
       .then((response) => response.json())
       // .then((json) => setData(json));
       .then((json) => {
